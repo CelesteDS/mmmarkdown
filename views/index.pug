@@ -1,0 +1,15 @@
+doctype html
+html(lang='en')
+  head
+    style 
+      include ./../public/style.css
+    include sidebar.pug
+    title Mmmarkdown
+  body
+    #main.flex-container
+      include header.pug
+      block editor
+        include editor.pug
+      block preview
+        include preview.pug
+    script(src='./../public/bundle.js')

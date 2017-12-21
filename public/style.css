@@ -1,0 +1,41 @@
+h1 {
+  color:red;
+}
+
+.header {
+  background-color: #333;
+  color: #EEE;
+  height:auto;
+  width:100%;
+  position:fixed;
+  top:0;
+}
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 20%; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #DDD; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 10px; /* Place content 60px from the top */
+}
+
+#main {
+  margin-left: 20%;
+}
+
+.editor, .preview {
+  background-color: #EEE;
+  height: 100vh;
+  display: block;
+  color: #111;
+  border: 3px solid #111;
+}
+
+.flex-container {
+  display: flex;
+  width: auto;
+}
