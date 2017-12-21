@@ -15,6 +15,10 @@ app.use(express.static('public'))
 //   res.send('./public/bundle.js')
 // })
 
+app.post('/save', (req, res) => {
+  console.log(req.body)
+})
+
 app.use((req, res) => {
   console.log(req.body)
   res.render('index')
