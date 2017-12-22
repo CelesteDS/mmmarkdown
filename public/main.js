@@ -1,15 +1,15 @@
-$(document).ready(() => {
+window.onload = () => {
   console.log('in document dot ready')
   document.getElementById('save').addEventListener('click', () => {
     console.log('in event listener')
-    let file = document.getElementById('md').innerHTML
-    let fileName = document.getElementById('filename').innerHTML
-    let body = { fileName, file }
+    const file = document.getElementById('md').innerHTML
+    const fileName = document.getElementById('filename').innerHTML
+    const body = { fileName, file }
     fetch('/save', {
       method: 'POST',
-      headers: new Headers({ 'Content-Type': 'text/plain'}),
-      body
-    })
-
+      headers: new Headers({ 'Content-Type': 'application/json' }),
+      body: JSON.stringify(body)
+    }).then(res => res.json())
+      .then(data => alert(data))
   })
-})
+}
