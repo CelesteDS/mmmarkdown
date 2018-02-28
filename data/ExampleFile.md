@@ -1,21 +1,19 @@
-# Markdown Example File
+     # My new Markdown Example File
 
 ## Sub-Heading!
-This is an `Example File`
-
-#### Smaller Heading:
+This is an `Example File`&nbsp;
+<br>### Smaller Heading:&nbsp;&nbsp;
 - List
-- Of
+<br>- Of
 - Elements
 - **bold**
-- _Italic_
+- _Italic__ &nbsp;
+<br>&nbsp; <br>#### Numbered List:
 
-#### Numbered List:
+<br>1. First list Element
+<br>2. Second thing in the list
 
-1. First list Element
-2. Second thing in the list
-
-> This is
-> a block
->
-> QUOTE.
+<br>&gt; This is
+<br>&gt; a block
+<br>&gt;
+<br>&gt; QUOTE.

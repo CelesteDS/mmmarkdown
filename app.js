@@ -17,7 +17,6 @@ app.post('/save', (req, res) => {
 })
 
 app.use((req, res) => {
-  console.log(req.body)
   res.render('index')
 })
 
