@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    style 
+      include ./../public/style.css
+    include sidebar.pug
+    script(src='http://rawgithub.com/chjj/marked/master/marked.min.js')
+    script
+      include ./../public/main.js
+    title Mmmarkdown
+  body
+    #main.flex-container
+      include header.pug
+      block editor
+        include editor.pug
+      block preview
+        include preview.pug
+    script(type='text/javascript').
+      let editor = document.getElementById('md')
+      let mark = editor.innerHTML
+      document.getElementById('mdPreview').innerHTML = marked(mark)
+      editor.addEventListener('keypress', function () {
+        let words = this.innerHTML.match(/\w+/g).length
+        document.getElementById('wordcount').innerHTML = `${words} words`
+        document.getElementById('mdPreview').innerHTML = marked(this.innerHTML)
+      })
